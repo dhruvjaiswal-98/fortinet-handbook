@@ -56,12 +56,8 @@ fortinet-handbook
 docs/
 labs/
 cheatsheets/
-diagrams/
-configs/
-images/
 resources/
 troubleshooting/
-interview-prep/
 ```
 
 ---
