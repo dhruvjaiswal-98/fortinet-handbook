@@ -1,7 +1,6 @@
 # Chapter 1 – Fortinet Company & Security Fabric
 
 > **Difficulty:** 🟢 Beginner  
-> **Estimated Reading Time:** 20–30 Minutes  
 > **Prerequisites:** Basic Networking Knowledge
 
 ---
