@@ -48,20 +48,6 @@ Every chapter includes:
 
 ---
 
-# 📂 Repository Structure
-
-```
-fortinet-handbook
-
-docs/
-labs/
-cheatsheets/
-resources/
-troubleshooting/
-```
-
----
-
 # 🎯 Goals
 
 - Build a complete Fortinet learning resource
