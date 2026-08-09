@@ -14,7 +14,7 @@ The goal is to create an enterprise-level Fortinet handbook that helps students,
 
 # 📚 Handbook Structure
 
-## Part 1 – Foundation
+## Foundation
 
 - Chapter 1 – Fortinet Company & Security Fabric
 - Chapter 2 – FortiGate Introduction
