@@ -426,8 +426,3 @@ IP Address Assigned
     DHCP Assigned        DHCP Assigned
        IP Address           IP Address
 ```
----
-
-## ➡️ Next Lab
-
-**Lab 03 – FortiGate Firewall Policy & NAT Configuration**
