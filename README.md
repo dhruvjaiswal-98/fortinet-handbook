@@ -18,19 +18,18 @@ The goal is to create an enterprise-level Fortinet handbook that helps students,
 
 - Chapter 1 – Fortinet Company & Security Fabric
 - Chapter 2 – FortiGate Introduction
-- Chapter 3 – Initial Configuration
-- Chapter 4 – Interfaces
-- Chapter 5 – Routing
-- Chapter 6 – VDOM
-- Chapter 7 – Firewall Policies
-- Chapter 8 – NAT
-- Chapter 9 – Security Profiles
-- Chapter 10 – SSL Inspection
-- Chapter 11 – VPN
-- Chapter 12 – High Availability
-- Chapter 13 – SD-WAN
-- Chapter 14 – Logging & Monitoring
-- Chapter 15 – Troubleshooting
+- Chapter 3 – Interfaces
+- Chapter 4 – Routing
+- Chapter 5 – VDOM
+- Chapter 6 – Firewall Policies
+- Chapter 7 – NAT
+- Chapter 8 – Security Profiles
+- Chapter 9 – SSL Inspection
+- Chapter 10 – VPN
+- Chapter 11 – High Availability
+- Chapter 12 – SD-WAN
+- Chapter 13 – Logging & Monitoring
+- Chapter 14 – Troubleshooting
 
 ---
 
