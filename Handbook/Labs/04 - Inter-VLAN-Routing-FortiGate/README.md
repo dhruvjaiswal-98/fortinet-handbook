@@ -104,9 +104,9 @@ At the end of this lab you will be able to:
 
 | Device | Interface | IP Address |
 |--------|-----------|------------|
-| FortiGate | Port2.10 | 192.168.10.1/24 |
+| FortiGate | Port2.10 | 192.168.1.1/24 |
 | VPC4 | NIC | DHCP |
-| Network | - | 192.168.10.0/24 |
+| Network | - | 192.168.1.0/24 |
 
 ---
 
@@ -114,9 +114,9 @@ At the end of this lab you will be able to:
 
 | Device | Interface | IP Address |
 |--------|-----------|------------|
-| FortiGate | Port2.20 | 192.168.20.1/24 |
+| FortiGate | Port2.20 | 192.168.2.1/24 |
 | VPC3 | NIC | DHCP |
-| Network | - | 192.168.20.0/24 |
+| Network | - | 192.168.2.0/24 |
 
 ---
 
@@ -124,8 +124,8 @@ At the end of this lab you will be able to:
 
 | VLAN | Name | Network | Purpose |
 |------|------|---------|---------|
-| 10 | SALES | 192.168.10.0/24 | Sales Users |
-| 20 | HR | 192.168.20.0/24 | HR Users |
+| 10 | SALES | 192.168.1.0/24 | Sales Users |
+| 20 | HR | 192.168.2.0/24 | HR Users |
 | 999 | NATIVE | N/A | Native VLAN |
 
 ---
@@ -144,7 +144,7 @@ For example:
      VLAN 10              VLAN 20
       SALES                 HR
         |                   |
-   192.168.10.0/24     192.168.20.0/24
+   192.168.1.0/24     192.168.2.0/24
 ```
 
 This provides:
@@ -253,9 +253,9 @@ Conceptually:
 ```text
 FortiGate Port2
       |
-      +---- VLAN 10 → 192.168.10.1/24
+      +---- VLAN 10 → 192.168.1.1/24
       |
-      +---- VLAN 20 → 192.168.20.1/24
+      +---- VLAN 20 → 192.168.2.1/24
 ```
 
 ---
@@ -421,7 +421,7 @@ Create a VLAN interface with the following configuration:
 | Type | VLAN |
 | Interface | Port2 |
 | VLAN ID | 10 |
-| IP Address | 192.168.10.1/24 |
+| IP Address | 192.168.1.1/24 |
 | Role | LAN |
 
 This interface becomes the default gateway for VLAN 10.
@@ -437,9 +437,9 @@ Example DHCP configuration:
 | Parameter | Value |
 |-----------|-------|
 | DHCP Status | Enabled |
-| Network | 192.168.10.0/24 |
-| Gateway | 192.168.10.1 |
-| DHCP Range | 192.168.10.2 – 192.168.10.254 |
+| Network | 192.168.1.0/24 |
+| Gateway | 192.168.1.1 |
+| DHCP Range | 192.168.1.2 – 192.168.1.254 |
 | Netmask | 255.255.255.0 |
 
 FortiGate will now provide IP addresses automatically to SALES clients.
@@ -457,7 +457,7 @@ Create another VLAN interface.
 | Type | VLAN |
 | Interface | Port2 |
 | VLAN ID | 20 |
-| IP Address | 192.168.20.1/24 |
+| IP Address | 192.168.2.1/24 |
 | Role | LAN |
 
 This interface becomes the default gateway for VLAN 20.
@@ -471,9 +471,9 @@ Enable DHCP Server on VLAN 20.
 | Parameter | Value |
 |-----------|-------|
 | DHCP Status | Enabled |
-| Network | 192.168.20.0/24 |
-| Gateway | 192.168.20.1 |
-| DHCP Range | 192.168.20.2 – 192.168.20.254 |
+| Network | 192.168.2.0/24 |
+| Gateway | 192.168.2.1 |
+| DHCP Range | 192.168.2.2 – 192.168.2.254 |
 | Netmask | 255.255.255.0 |
 
 ### Screenshot
@@ -497,12 +497,6 @@ VLAN20-HR
 
 ```
 
-### Screenshot
-
-<img width="747" height="322" alt="image" src="https://github.com/user-attachments/assets/0072d2f1-f968-45a1-9307-6c5e1ca8a11a" />
-
-```
-
 Conceptually:
 
 ```text
@@ -514,7 +508,7 @@ Conceptually:
               /          \
              /            \
         VLAN 10          VLAN 20
-       192.168.10.1     192.168.20.1
+       192.168.1.1     192.168.2.1
             |                 |
           SALES               HR
 ```
@@ -541,8 +535,8 @@ Example:
 
 ```text
 VPC4
-IP Address : 192.168.10.x
-Gateway    : 192.168.10.1
+IP Address : 192.168.1.x
+Gateway    : 192.168.1.1
 ```
 
 Verify:
@@ -558,7 +552,7 @@ show ip
 From VPC4:
 
 ```text
-ping 192.168.10.1
+ping 192.168.1.1
 ```
 
 The FortiGate VLAN 10 interface should respond.
@@ -569,7 +563,7 @@ The FortiGate VLAN 10 interface should respond.
 
 ### Screenshot
 
-![VLAN 10 Gateway Ping](images/08-vlan10-gateway.png)
+<img width="1280" height="352" alt="image" src="https://github.com/user-attachments/assets/72cecd1b-5a71-4006-abf2-4d90c786897c" />
 
 ---
 
@@ -613,7 +607,7 @@ The FortiGate VLAN 20 interface should respond.
 
 ### Screenshot
 
-![VLAN 20 Gateway Ping](images/09-vlan20-gateway.png)
+<img width="1287" height="456" alt="image" src="https://github.com/user-attachments/assets/e86aa2b6-17ce-4884-9824-f798af91cd4a" />
 
 ---
 
@@ -663,7 +657,9 @@ Enable logging for all sessions to make troubleshooting and traffic analysis eas
 
 ### Screenshot
 
-![VLAN 10 Firewall Policy](images/10-vlan10-policy.png)
+<img width="828" height="600" alt="image" src="https://github.com/user-attachments/assets/b9c6776e-4749-4d3b-a9a7-6c1b0a6a1dc5" />
+
+<img width="873" height="408" alt="image" src="https://github.com/user-attachments/assets/bcb22941-124d-4a7f-b42f-4ac839a818bf" />
 
 ---
 
@@ -682,10 +678,6 @@ Create a similar firewall policy for VLAN 20.
 | Action | ACCEPT |
 | NAT | Enabled |
 | Log Allowed Traffic | All Sessions |
-
-### Screenshot
-
-![VLAN 20 Firewall Policy](images/11-vlan20-policy.png)
 
 ---
 
@@ -817,7 +809,7 @@ Create the reverse policy.
 
 ### Screenshot
 
-![Inter-VLAN Policies](images/12-inter-vlan-policies.png)
+<img width="925" height="656" alt="image" src="https://github.com/user-attachments/assets/c8676486-c94f-4fec-9e44-dc5a99b976bc" />
 
 ---
 
@@ -898,7 +890,7 @@ This helps identify which devices are generating traffic.
 
 ### Screenshot
 
-![FortiView Sources](images/13-fortiview-sources.png)
+<img width="1343" height="395" alt="image" src="https://github.com/user-attachments/assets/44ba1753-bfe6-4920-8db9-71a2f91fbc52" />
 
 ---
 
@@ -916,7 +908,7 @@ This is extremely useful during troubleshooting.
 
 ### Screenshot
 
-![FortiView Policies](images/14-fortiview-policies.png)
+<img width="1376" height="452" alt="image" src="https://github.com/user-attachments/assets/b88ad756-ecec-4740-bbf5-bb3fddc53a26" />
 
 ---
 
@@ -1167,99 +1159,6 @@ VLAN 20
 
 FortiGate performs the routing and security enforcement.
 
----
-
-# 🎤 Interview Questions Covered
-
-## 1. What is a VLAN?
-
-A VLAN (Virtual Local Area Network) logically divides a Layer 2 network into separate broadcast domains, improving security, performance, and network organization.
-
----
-
-## 2. What is an Access Port?
-
-An access port carries traffic for only one VLAN and sends/receives untagged Ethernet frames. It is typically used to connect end devices such as PCs, printers, or IP phones.
-
----
-
-## 3. What is a Trunk Port?
-
-A trunk port carries traffic for multiple VLANs over a single physical link using 802.1Q VLAN tagging. It is commonly used between switches or between a switch and a router/firewall.
-
----
-
-## 4. What is IEEE 802.1Q?
-
-IEEE 802.1Q is the VLAN tagging standard that inserts a VLAN tag into Ethernet frames, allowing multiple VLANs to share a physical link while keeping their traffic logically separated.
-
----
-
-## 5. What is the Native VLAN?
-
-The native VLAN is the VLAN on a trunk link whose frames are transmitted without an 802.1Q tag.
-
-In this lab:
-
-```text
-Native VLAN = 999
-```
-
----
-
-## 6. Why is VLAN 1 not recommended as the Native VLAN?
-
-VLAN 1 is the default VLAN and is commonly associated with various switch control protocols. Using a dedicated unused VLAN such as VLAN 999 as the native VLAN is a common hardening practice.
-
----
-
-## 7. How does FortiGate perform Inter-VLAN Routing?
-
-FortiGate creates separate VLAN subinterfaces on a physical interface.
-
-For example:
-
-```text
-Port2.10 → 192.168.10.1/24
-Port2.20 → 192.168.20.1/24
-```
-
-Each VLAN interface acts as the default gateway for its respective VLAN.
-
-Traffic between the VLANs is routed through FortiGate and evaluated against firewall policies.
-
----
-
-## 8. Why are firewall policies required for Inter-VLAN communication?
-
-FortiGate is a firewall, not simply a router.
-
-Even when routing information exists, traffic must match an appropriate firewall policy before it is allowed to pass between interfaces.
-
----
-
-## 9. Why is NAT not required between VLAN 10 and VLAN 20?
-
-Both VLANs are internal private networks.
-
-FortiGate is routing between them, so the original source and destination IP addresses should normally remain unchanged.
-
-NAT is instead used when internal private addresses access an external network such as the Internet.
-
----
-
-## 10. What happens if the trunk is configured incorrectly?
-
-If the VLAN IDs do not match, the trunk is not configured correctly, or the VLANs are not allowed on the trunk, VLAN traffic will not reach the FortiGate.
-
-Possible symptoms include:
-
-- DHCP failure
-- Gateway unreachable
-- Inter-VLAN communication failure
-- Internet connectivity failure
-
----
 
 # 📊 Final Lab Result
 
@@ -1303,30 +1202,6 @@ Both VLANs can:
 
 ---
 
-# 📂 Lab Structure
-
-```text
-04-Inter-VLAN-Routing-FortiGate/
-│
-├── README.md
-│
-└── images/
-    ├── 01-fortigate-boot.png
-    ├── 02-hostname.png
-    ├── 03-port1-configuration.png
-    ├── 04-wan-ping.png
-    ├── 05-vlan10-configuration.png
-    ├── 06-vlan20-configuration.png
-    ├── 07-vlan-interfaces.png
-    ├── 08-vlan10-gateway.png
-    ├── 09-vlan20-gateway.png
-    ├── 10-vlan10-policy.png
-    ├── 11-vlan20-policy.png
-    ├── 12-inter-vlan-policies.png
-    ├── 13-fortiview-sources.png
-    └── 14-fortiview-policies.png
-```
-
 ---
 
 # 📝 Lab Status
@@ -1346,8 +1221,3 @@ Firewall Policies                  ✅
 FortiView Monitoring               ✅
 ```
 
----
-
-## ➡️ Next Lab
-
-**Lab 05 – FortiGate Static Routing Configuration**
