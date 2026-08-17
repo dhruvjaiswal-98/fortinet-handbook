@@ -391,15 +391,3 @@ All these products become part of the **Security Fabric**, sharing threat intell
 - The Fortinet certification roadmap progresses from FCF to FCX.
 
 ---
-
-# 📚 References
-
-- Official Fortinet Documentation
-- Fortinet Training Institute
-- FortiGuard Labs Documentation
-
----
-
-## ➡ Next Chapter
-
-**Chapter 2 – FortiGate Fundamentals & Architecture**
