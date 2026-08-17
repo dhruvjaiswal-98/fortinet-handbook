@@ -1,8 +1,5 @@
 # Chapter 1 – Fortinet Company & Security Fabric
 
-> **Difficulty:** 🟢 Beginner  
-> **Prerequisites:** Basic Networking Knowledge
-
 ---
 
 # 📖 Overview
