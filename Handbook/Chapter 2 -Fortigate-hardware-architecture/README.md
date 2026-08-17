@@ -1,8 +1,5 @@
 # Chapter 2 – FortiGate Hardware Architecture
 
-> **Difficulty:** 🟢 Beginner → 🟡 Intermediate  
-> **Prerequisites:** Basic Networking Knowledge and Chapter 1 – Fortinet Company & Security Fabric
-
 ---
 
 # 📖 Overview
