@@ -1,4 +1,4 @@
-# Chapter 2 – FortiGate Hardware Architecture
+# Chapter 2 – FortiGate Introduction
 
 ---
 
