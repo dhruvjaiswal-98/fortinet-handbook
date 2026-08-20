@@ -1,7 +1,5 @@
 # Chapter 4 -- Firewall Fundamentals & FortiGate Firewall Policies
 
-> **Part 2 -- Network Security Fundamentals**
-
 ------------------------------------------------------------------------
 
 ## 📌 Chapter Overview
@@ -2128,107 +2126,11 @@ incorrect NAT or routing.
   Least Privilege       Allow only required access
   Segmentation          Separating networks into security zones
 
-------------------------------------------------------------------------
 
-# 4.67 Interview Questions
-
-## Q1. What is a firewall?
-
-A firewall is a security device or software system that monitors and
-controls network traffic according to predefined security policies.
-
-## Q2. What is a firewall policy?
-
-A firewall policy defines the conditions under which traffic is allowed
-or denied and specifies additional controls such as NAT, security
-profiles, and logging.
-
-## Q3. What are the main components of a FortiGate firewall policy?
-
-Common components include:
-
--   Incoming interface
--   Source
--   Outgoing interface
--   Destination
--   Schedule
--   Service
--   Action
--   NAT
--   Security profiles
--   Logging
-
-## Q4. What is the difference between ACCEPT and DENY?
-
-**ACCEPT** permits matching traffic to proceed, while **DENY** blocks
-the traffic.
-
-## Q5. What is implicit deny?
-
-Implicit deny means traffic that does not match a policy allowing it is
-denied by default.
-
-## Q6. Why is policy order important?
-
-Because firewall policies are evaluated in sequence. A broad policy
-placed before a specific policy can match traffic first and produce an
-unintended result.
-
-## Q7. Why should specific policies be placed before general policies?
-
-Specific policies provide more precise control. General policies can
-otherwise capture traffic before the specific policy is reached.
-
-## Q8. What is NAT?
-
-NAT translates IP addressing information between networks.
-
-A common example is translating private internal addresses into a public
-IP for Internet access.
-
-## Q9. What is the difference between a firewall policy and a security profile?
-
-A firewall policy determines whether traffic is allowed or denied. A
-security profile provides additional inspection and security enforcement
-for permitted traffic.
-
-## Q10. What is a stateful firewall?
-
-A stateful firewall maintains information about active connections and
-uses session state when processing traffic.
-
-## Q11. What is an NGFW?
-
-A Next-Generation Firewall combines traditional firewall functionality
-with advanced security capabilities such as IPS, application control,
-antivirus, web filtering, and SSL inspection.
-
-## Q12. What is the purpose of a DMZ?
-
-A DMZ provides a controlled network segment for systems that need
-limited communication with external networks, such as public-facing web
-servers.
-
-## Q13. What is least privilege in firewall configuration?
-
-Least privilege means allowing only the minimum communication required
-for a user, application, or system to perform its function.
-
-## Q14. Why is logging important?
-
-Logging provides visibility into traffic and security events and helps
-with troubleshooting, auditing, monitoring, and incident investigation.
-
-## Q15. What is the difference between North-South and East-West traffic?
-
-**North-South traffic** moves between internal and external networks.
-
-**East-West traffic** moves between internal systems or network
-segments.
 
 ------------------------------------------------------------------------
 
-# 4.68 Chapter Summary
+# 4.67 Chapter Summary
 
 A firewall is a critical security control used to regulate communication
 between networks and systems.
@@ -2274,7 +2176,7 @@ The most important concepts covered in this chapter are:
 
 ------------------------------------------------------------------------
 
-# 4.69 Key Takeaways
+# 4.68 Key Takeaways
 
 > **A firewall controls network access.**
 
@@ -2304,47 +2206,4 @@ The most important concepts covered in this chapter are:
 > meaningful objects, appropriate logging, and regular policy review.**
 
 ------------------------------------------------------------------------
-
-# 4.70 Chapter Completion Checklist
-
-After studying this chapter, you should be able to explain:
-
--   [x] What a firewall is
--   [x] Why firewalls are required
--   [x] Different firewall types
--   [x] Stateful firewall operation
--   [x] Next-Generation Firewall concepts
--   [x] FortiGate firewall fundamentals
--   [x] Firewall policy structure
--   [x] Incoming and outgoing interfaces
--   [x] Source and destination objects
--   [x] Services and service groups
--   [x] Policy schedules
--   [x] ACCEPT and DENY actions
--   [x] NAT concepts
--   [x] Security profiles
--   [x] Policy order
--   [x] Implicit deny
--   [x] Least privilege
--   [x] DMZ security
--   [x] Inter-VLAN policies
--   [x] User-based policies
--   [x] Application Control
--   [x] Web Filtering
--   [x] Antivirus inspection
--   [x] IPS
--   [x] SSL/TLS inspection
--   [x] Firewall logging
--   [x] Policy lifecycle
--   [x] Firewall best practices
--   [x] North-South traffic
--   [x] East-West traffic
--   [x] Firewall troubleshooting concepts
-
-------------------------------------------------------------------------
-
-# 📚 End of Chapter 4
-
-**Next Chapter:**\
-\## Chapter 5 -- Switching Fundamentals & VLANs
 
